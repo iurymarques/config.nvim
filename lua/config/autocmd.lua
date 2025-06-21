@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     local client = vim.lsp.get_client_by_id(e.data.client_id)
     if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, e.buf) then
-      local highlight_augroup = vim.api.nvim_create_augroup("lsp_highlight", { clear = false })
+      local highlight_augroup = vim.api.nvim_create_augroup("lsp-highlight", { clear = false })
 
       -- When cursor stops moving: Highlights all instances of the symbol under the cursor
       -- When cursor moves: Clears the highlighting

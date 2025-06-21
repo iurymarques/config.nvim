@@ -32,15 +32,18 @@ opt.shiftwidth = 2
 opt.more = false
 
 opt.foldmethod = "manual"
+opt.foldlevel = 100
 
 opt.undofile = true
 
 opt.clipboard = "unnamedplus"
 
+opt.scrolloff = 10
+
 vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = '*',
-	callback = function()
-		-- don't have `o` add a comment
-		opt.formatoptions:remove("o")
-	end
+  pattern = "*",
+  callback = function()
+    -- don't have `o` add a comment
+    opt.formatoptions:remove("o")
+  end,
 })
