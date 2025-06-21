@@ -5,12 +5,9 @@ return {
     ---@module 'snacks'
     ---@type snacks.Config
     opts = {
-      picker = {
-        enabled = true,
-      },
-      input = {
-        enabled = true,
-      },
+      picker = {},
+      input = {},
+      scroll = {},
     },
     keys = {
       -- navigation
