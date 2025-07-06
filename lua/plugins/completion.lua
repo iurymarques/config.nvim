@@ -6,12 +6,15 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
-			signature = { enabled = true },
+      signature = { enabled = true },
       keymap = { preset = "default" },
       appearance = {
         nerd_font_variant = "mono",
       },
-      completion = { documentation = { auto_show = false } },
+      completion = {
+        menu = { border = "none" },
+        documentation = { window = { border = "none" }, auto_show = false },
+      },
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },
       },
