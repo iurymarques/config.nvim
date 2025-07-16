@@ -40,7 +40,7 @@ opt.clipboard = "unnamedplus"
 
 opt.scrolloff = 10
 
--- vim.o.winborder = "single"
+vim.o.winborder = "single"
 
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*",
